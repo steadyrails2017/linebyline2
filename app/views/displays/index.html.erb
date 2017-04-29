@@ -1,3 +1,15 @@
+<div class="display-index">
+
 <h1> LinebyLine </h1>
 
 <%= link_to "Add a New Display", new_display_path %>
+
+<p>
+<% @displays.each do |display| %>
+  <%= image_tag display.image.url(:medium) %>
+  <%= display.caption %>
+<% end %>
+
+</p>
+
+</div>
