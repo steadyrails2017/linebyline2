@@ -41,6 +41,8 @@ group :development, :test do
   gem 'rspec-rails', :groups => [:development, :test]
   # use the factory_girl Gem
   gem 'factory_girl_rails'
+  # use capybar Gem
+  gem 'capybara'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
