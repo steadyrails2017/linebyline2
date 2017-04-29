@@ -4,6 +4,7 @@ class DisplaysController < ApplicationController
     end
 
     def new
+    	@display = Display.new
     end
 
 end

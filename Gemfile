@@ -15,6 +15,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'mysql2'
 # Use Devise Gem
 gem 'devise'
+# Use SimpleForm Gem
+gem 'simple_form'
+# Use the Paperclip Gem
+gem 'paperclip', '~>5.0.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
