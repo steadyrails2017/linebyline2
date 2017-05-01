@@ -1,15 +1,25 @@
-<div class="display-index">
 
-<h1> LinebyLine </h1>
 
-<%= link_to "Add a New Display", new_display_path %>
+<%= render :partial => "/displays/jumbo_partial.html.erb" %>
 
-<p>
-<% @displays.each do |display| %>
-  <%= image_tag display.image.url(:medium) %>
-  <%= display.caption %>
-<% end %>
 
-</p>
-
+<div class="img-container">
+<div class="displays-wrapper row">
+  <% @displays.each do |display| %>
+    <div class="display-each">
+      <div class="display-head">
+        <div class="name">
+          Image Title
+        </div>
+      </div>
+      <div class="image-center-block">
+        <%= link_to (image_tag display.image.url(:medium), class:'img-responsive'), display_path(display) %>
+      </div>
+      <p class="caption">
+        <%= display.caption %>
+      </p>
+    </div>
+  <% end %>
 </div>
+
+

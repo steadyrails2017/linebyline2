@@ -8,7 +8,51 @@
 </head>
 <body>
 
-<%= yield %>
 
+<div id="navbar" class="navbar">
+
+<h1> LinebyLine </h1>
+
+<div class="nav-links">
+
+        <% if user_signed_in? %>
+
+
+
+           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+
+           <%= link_to "Account", edit_user_registration_path %>
+
+
+        <%= link_to "New Video", new_display_path %>
+        <%= link_to "New Post", new_display_path %>
+
+           <%= link_to "New Display", new_display_path %>
+
+
+        <% else %>
+
+        <%= link_to "Contact", new_display_path %>
+        <%= link_to "About Us", new_display_path %>
+
+            <%= link_to "Sign In", new_user_session_path %>
+
+            <%= link_to "Register", new_user_registration_path %>
+
+        <% end %>
+
+        </div>
+</div>
+
+
+ <div class="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "alert-alert-info" %>
+    <% end %>
+
+  </div>
+ <div class="container">
+<%= yield %>
+</div>
 </body>
 </html>

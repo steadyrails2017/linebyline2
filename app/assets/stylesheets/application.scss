@@ -1,0 +1,265 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ body {
+  background-color: #fafafa;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+   display: inline-block;
+   vertical-align: top;
+   padding: 1em;
+   width: 100%;
+
+   h1 {
+
+   float: left;
+   }
+
+}
+
+.nav-links a {
+  float: right;
+  padding: 5px;
+}
+
+
+.navbar-brand {
+  a {
+    color: #125688;
+  }
+}
+
+.navbar-default {
+  background-color: #fff;
+  height: 54px;
+  .navbar-nav li a {
+    color: #125688;
+  }
+}
+
+.navbar-container {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.displays-wrapper {
+  padding-top: 40px;
+  margin: 0 auto;
+  width: 100%;
+
+}
+
+displays-wrapper-row {
+	padding-top: 3%;
+}
+
+
+.display {
+  background-color: #fff;
+  border-color: #edeeee;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.display-head {
+  color: #ffffff;
+  background-color: #337ab7;
+  height: 64px;
+  padding: 14px 20px;
+  color: #125688;
+  font-size: 15px;
+  line-height: 18px;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  .thumbnail {}
+  .name {
+    color: #ffffff;
+    display: block;
+
+  }
+  p {
+  text-align: center;
+  }
+}
+
+.display-each {
+  float: left;
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+  border-color: #edeeee;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.img-container {
+
+
+}
+
+.img-responsive-small {
+	height: 200px;
+	padding-top: 4%;
+	margin-top: 4%;
+	float: left;
+}
+
+.jumbotron {
+    width: 100%;
+	padding: 5%;
+	background-color: white;
+}
+
+
+.image {
+  border-bottom: 1px solid #eeefef;
+  border-top: 1px solid #eeefef;
+}
+
+.img-responsive {
+    height: auto;
+}
+
+.caption {
+  padding: .5em;
+  font-size: 15px;
+  line-height: 18px;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  height: 5em;
+}
+
+
+.form-wrapper {
+  width: 60%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid #eeefef;
+  border-radius: 3px;
+}
+
+.edit-links {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+button.navbar-toggle-collapsed {
+	width: 10em;
+
+}
+
+.text-center {
+	padding: 10%;
+	a {
+	padding: 10%;
+	}
+}
+
+.form-wrapper {
+	text-align: center;
+}
+
+input#display_image {
+	padding-left: 25%;
+	margin: 2em;
+}
+
+input {
+    margin: 3%;
+	padding: 2%;
+}
+
+
+.left-col {
+    float: left;
+    width: 30%;
+    height: 335px;
+    border-left: 1px;
+    border-right: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 2%;
+
+    .btn {
+    padding: .2em;
+    }
+
+}
+.center-col {
+    float: left;
+    width: 30%;
+    height: 335px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-left: 1px;
+    border-right: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 2%;
+
+    .btn {
+    padding: .2em;
+    }
+
+}
+.right-col {
+    float: left;
+    width: 30%;
+    height: 335px;
+    border-left: 1px;
+    border-right: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 2%;
+    margin: auto;
+
+
+    .btn {
+    padding: .2em;
+    }
+
+    h1 {
+
+    }
+}
+
+ul.img-container {
+    width: 25%;
+    height: 25%;
+    float: left;
+
+
+}
+
+
+
+

@@ -1,4 +1,5 @@
 <div class="form-wrapper">
+<h1> Edit Your Display </h1>
   <%= simple_form_for @display, html: { class: 'form-horizontal', multipart: true } do |f| %>
     <div class="form-group">
       <%= f.input :image %>
@@ -10,4 +11,10 @@
       <%= f.button :submit, class: 'btn-success' %>
     </div>
   <% end %>
+</div>
+
+<div class="text-center edit-links">
+  <%= link_to "Cancel", displays_path %>
+  <%= link_to "Delete Display", display_path(@display), method: :delete, data: { confirm: "Are you sure you want to delete this display?" } %>
+
 </div>

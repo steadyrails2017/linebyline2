@@ -1,0 +1,21 @@
+<div class="displays-wrapper row">
+  <div class="display">
+    <div class="display-head">
+      <div class="name">
+        Title
+      </div>
+    </div>
+    <div class="image center-block">
+      <%= image_tag @display.image.url(:medium) %>
+    </div>
+    <p class="caption">
+      <%= @display.caption %>
+    </p>
+    <div class="text-center">
+       <%= link_to "Cancel", displays_path %>
+
+       <%= link_to "Edit Post", edit_display_path(@display) %>
+    </div>
+  </div>
+</div>
+
