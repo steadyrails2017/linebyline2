@@ -9,49 +9,42 @@
 <body>
 
 
-<div id="navbar" class="navbar">
+<div class="top-nav">
 
-<h1> LinebyLine </h1>
-
-<div class="nav-links">
-
-        <% if user_signed_in? %>
-
-
-
-           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-
-           <%= link_to "Account", edit_user_registration_path %>
-
-
-        <%= link_to "New Video", new_display_path %>
-        <%= link_to "New Post", new_display_path %>
-
-           <%= link_to "New Display", new_display_path %>
-
-
-        <% else %>
-
-        <%= link_to "Contact", new_display_path %>
-        <%= link_to "About Us", new_display_path %>
-
-            <%= link_to "Sign In", new_user_session_path %>
-
-            <%= link_to "Register", new_user_registration_path %>
-
-        <% end %>
-
-        </div>
+<h1> LinebyLine <input type="text" name="search" placeholder="Search.."> </h1>
 </div>
 
+<div class="col-2">
+   <div class="left-nav">
+
+      <h5><strong> Navigation </strong></h5>
+      <% if user_signed_in? %>
+
+      <ul><%= link_to "New Post", new_display_path %></ul>
+      <ul><%= link_to "New Display", new_display_path %></ul>
+      <ul><%= link_to "New Video", new_display_path %></ul>
+      <ul><%= link_to "New Link 1", new_display_path %></ul>
+      <ul><%= link_to "New Link 2", new_display_path %></ul>
+      <ul><%= link_to "New Link 3", new_display_path %></ul>
+      <ul><%= link_to "Account", edit_user_registration_path %></ul>
+      <ul><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></ul>
+
+       <% else %>
+
+       <ul><%= link_to "Contact", new_display_path %></ul>
+       <ul><%= link_to "About Us", new_display_path %></ul>
+       <ul><%= link_to "Sign In", new_user_session_path %></ul>
+       <ul><%= link_to "Register", new_user_registration_path %></ul>
+
+        <% end %>
+     </div>
+  </div>
 
  <div class="container">
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: "alert-alert-info" %>
     <% end %>
 
-  </div>
- <div class="container">
 <%= yield %>
 </div>
 </body>

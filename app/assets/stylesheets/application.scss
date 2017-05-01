@@ -17,6 +17,157 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+* {
+    box-sizing: border-box;
+}
+.header {
+    border: 1px solid green;
+    padding: 15px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 { min-width: 200px; height: 425px; width: 20%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 80%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+
+}
+
+.top-nav {
+    border: 1px solid green;
+    padding-top: 1em;
+    h1 {
+    padding-left: .5em;
+    }
+    h5 {
+    color: grey;
+    text-align: center;
+    }
+
+}
+
+.left-nav {
+	 padding: 1em;
+	 h5 {
+	 padding-right: 60%;
+	 text-align: center;
+	 color: #125688;
+	 margin-bottom: 2em;
+	 }
+}
+
+	h1 {
+	 margin-left: .6em;
+	 padding-bottom: .3em;
+	 color: #bd3381;
+
+  .input[type=text] {
+     float: right;
+     width: 5em;
+     -webkit-transition: width 0.4s ease-in-out;
+     transition: width 0.4s ease-in-out;
+
+}
+
+    /* When the input field gets focus, change its width to 100% */
+    input[type=text]:focus {
+    width: 50%;
+}
+	}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1em;
+    margin-top: 1em;
+
+    a {
+    margin-left: 1em;
+    color: #4741ce;
+    }
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #b218a3;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    list-style-type: none;
+}
+
+li.menu {
+	list-style-type: none;
+	color: #b218a3;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+
+.columns-container {
+
+	margin-left: em;
+	h1 {
+	margin:auto;
+    vertical-align:middle;
+	color: #125688;
+	}
+	p {
+	text-align: left;
+	}
+	a {
+	color: #bd3482
+	}
+}
+
+h1 input {
+     font-color: #4741ce;
+     font-size: 22px;
+	 float: right;
+	 border-color: #edeeee;
+     border-style: solid;
+     border-radius: 3px;
+     border-width: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -64,10 +215,11 @@
   padding-top: 40px;
   margin: 0 auto;
   width: 100%;
+  height: 250px;
 
 }
 
-displays-wrapper-row {
+.displays-wrapper {
 	padding-top: 3%;
 }
 
@@ -93,6 +245,7 @@ displays-wrapper-row {
   border-style: solid;
   border-radius: 3px;
   border-width: 1px;
+  border-color: #ccc;
   .thumbnail {}
   .name {
     color: #ffffff;
@@ -104,6 +257,10 @@ displays-wrapper-row {
   }
 }
 
+.index-h2 {
+	color: #125688;
+}
+
 .display-each {
   float: left;
   height: 100px;
@@ -113,14 +270,14 @@ displays-wrapper-row {
   border-style: solid;
   border-radius: 4px;
   border-width: 1px;
-  margin-bottom: 60px;
-  margin-top: 60px;
+  margin-bottom: 8em;
+  margin-top: 2em;
   margin-left: .5em;
   margin-right: .5em;
 }
 
-.img-container {
-
+div.img-container {
+  height: 250px;
 
 }
 
@@ -131,10 +288,18 @@ displays-wrapper-row {
 	float: left;
 }
 
+.img-index {
+	min-height: 550px;
+}
+
 .jumbotron {
     width: 100%;
 	padding: 5%;
 	background-color: white;
+}
+
+.jumbo-container {
+  width: 100%;
 }
 
 
@@ -154,7 +319,9 @@ displays-wrapper-row {
   border-style: solid;
   border-radius: 3px;
   border-width: 1px;
+  border-color: #ccc;
   height: 5em;
+  color: #125688;
 }
 
 
@@ -193,11 +360,6 @@ input#display_image {
 	margin: 2em;
 }
 
-input {
-    margin: 3%;
-	padding: 2%;
-}
-
 
 .left-col {
     float: left;
@@ -207,7 +369,10 @@ input {
     border-right: 1px;
     border-style: solid;
     border-radius: 25px;
+    border-color: #ccc;
     padding: 2%;
+    margin-top: 1em;
+    margin-bottom: 3em;
 
     .btn {
     padding: .2em;
@@ -220,10 +385,12 @@ input {
     height: 335px;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 1em;
     border-left: 1px;
     border-right: 1px;
     border-style: solid;
     border-radius: 25px;
+    border-color: #ccc;
     padding: 2%;
 
     .btn {
@@ -235,22 +402,20 @@ input {
     float: left;
     width: 30%;
     height: 335px;
+    margin-top: 1em;
     border-left: 1px;
     border-right: 1px;
     border-style: solid;
     border-radius: 25px;
+    border-color: #ccc;
     padding: 2%;
-    margin: auto;
 
 
     .btn {
     padding: .2em;
     }
-
-    h1 {
-
-    }
 }
+
 
 ul.img-container {
     width: 25%;

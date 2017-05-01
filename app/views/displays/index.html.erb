@@ -2,9 +2,9 @@
 
 <%= render :partial => "/displays/jumbo_partial.html.erb" %>
 
-
-<div class="img-container">
-<div class="displays-wrapper row">
+<div class="col-9">
+<div class="img-index">
+<div class="index-h2"><h2> Latest Community Images </h2></div>
   <% @displays.each do |display| %>
     <div class="display-each">
       <div class="display-head">
@@ -20,6 +20,7 @@
       </p>
     </div>
   <% end %>
+</div>
 </div>
 
 
