@@ -21,6 +21,8 @@ gem 'devise'
 gem 'simple_form'
 # Use the Paperclip Gem
 gem 'paperclip', '~>5.0.0'
+# Use the ckeditor Gem
+gem 'ckeditor'
 # Use Masonry-Rails Gem
 gem 'masonry-rails', '~> 0.2.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes

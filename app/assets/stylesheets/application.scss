@@ -156,7 +156,38 @@ h1 input {
      border-width: 1px;
 }
 
+.form-inputs {
+    min-height: 750px;
+	margin-left: 15%;
+	text-align: center;
 
+}
+
+.form-actions input.btn {
+   margin-left: 52%;
+
+}
+
+.form-checkbox {
+  text-align: center;
+  width: 4em;
+  display: block;
+  float: left;
+  padding-right: 10px;
+  white-space: nowrap;
+  vertical-align: middle;
+
+}
+
+
+label.boolean.optional.control-label {
+    text-align: center;
+	width: 2em;
+}
+
+.control-group.boolean.optional.post_finished {
+	width: 3em;
+}
 
 
 

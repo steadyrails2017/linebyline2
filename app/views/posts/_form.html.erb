@@ -1,0 +1,22 @@
+<%= simple_form_for(@post) do |f| %>
+  <%= f.error_notification %>
+
+<div class="col-9">
+  <div class="form-inputs">
+    <%= f.input :author %>
+    <%= f.input :title, :input_html => {:maxlength => 2, :style=> 'width: 300px'} %>
+    <%= f.input :subject, :input_html => {:maxlength => 2, :style=> 'width: 500px'} %>
+    <%= f.input :body, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
+    <%= f.input :twitter_link, :input_html => {:maxlength => 2, :style=> 'width: 400px'} %>
+    <%= f.input :facebook_link, :input_html => {:maxlength => 2, :style=> 'width: 400px'} %>
+    <div class="form-checkbox">
+    <%= f.input :finished %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+<%= link_to 'Back', posts_path %>
+</div>

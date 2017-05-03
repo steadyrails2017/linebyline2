@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170429052030) do
+ActiveRecord::Schema.define(version: 20170503205410) do
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",    limit: 255, null: false
+    t.string   "data_content_type", limit: 255
+    t.integer  "data_file_size",    limit: 4
+    t.string   "data_fingerprint",  limit: 255
+    t.string   "type",              limit: 30
+    t.integer  "width",             limit: 4
+    t.integer  "height",            limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "ckeditor_assets", ["type"], name: "index_ckeditor_assets_on_type", using: :btree
 
   create_table "displays", force: :cascade do |t|
     t.string   "caption",            limit: 255
@@ -21,6 +35,20 @@ ActiveRecord::Schema.define(version: 20170429052030) do
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "author",        limit: 255
+    t.string   "title",         limit: 255
+    t.text     "body",          limit: 65535
+    t.string   "subject",       limit: 255
+    t.string   "category",      limit: 255
+    t.string   "article_id",    limit: 255
+    t.string   "twitter_link",  limit: 255
+    t.string   "facebook_link", limit: 255
+    t.boolean  "finished"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "users", force: :cascade do |t|
